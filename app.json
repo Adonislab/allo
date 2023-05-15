@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "allogroup",
+    "slug": "allogroup",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Icone.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/LogoHome.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a5089"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/LogoHome.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/LogoHome.png"
+    }
+  }
+}
