@@ -28,35 +28,29 @@ const Setting = () => {
 		getCurrentUser();
 	}, []); 
 	const onPressLivreur = () => {
-		navigation.navigate('inscriptionLivreur');
+		navigation.navigate('InscriptionLivreurNew');
 	};
 	const onPressFastFood = () => {
-		navigation.navigate('InscriptionFastGerant');
+		navigation.navigate('InscriptionGerant');
 	};
-	const onPressDeconection = () => {
-		alert('OK')
+	const onPressFoire = () => {
+		navigation.navigate('Presentation')
 	};
 
 	return (
 	<View style={styles.root}>	
 	<View style={styles.profil}>	
 		<Image 
-			source={require('../../../assets/profil_default.png')}
+			source={require('../../../assets/pama.png')}
 			style={styles.profil}
 			resizeMode="contain"
 		/>
 	</View>	
-	<View>
-		<Text style={{fontSize:15,  paddingBottom:20}}> Identifiant : {user?.username}</Text>
-		<Text style={{fontSize:15, paddingBottom:20}}> Email : {user?.attributes?.email}</Text>
-		<TouchableOpacity style={{paddingBottom:20}} onPress={onPressDeconection}>
-			<Text style={{fontSize:15}}> Se déconnecter</Text>
-		</TouchableOpacity>
-	</View>
 	
-	<Pressable style={{paddingBottom:20}}
+	
+	<Pressable style={{paddingBottom:20, paddingTop:20, alignItems:'center'}}
 		onPress={onPressFunctionRecharger}>
-  		<Text style={{fontWeight:'bold', color:'blue'}}>Rechargez votre portefeuille</Text>
+  		<Text style={{fontWeight:'bold', color:'blue'}}>Rechargez mon portefeuille</Text>
 	</Pressable>
 	
 	<View style={{alignItems:'center'}}>
@@ -79,6 +73,13 @@ const Setting = () => {
 			</Text>
 		</TouchableOpacity>
 
+		<TouchableOpacity onPress={onPressFoire}>
+			<Text style={{fontSize:15, 
+			paddingBottom:20}}>
+				Foire aux questions
+			</Text>
+		</TouchableOpacity>
+
 	</View>
 	</View>	
 )};		
@@ -89,6 +90,8 @@ const styles= StyleSheet.create(
 		alignItems:'center',
 		backgroundColor:'white',
 		borderRadius:10,
+		width:'100%',
+		height: 150
 	},
 	root:{
 		marginRight:10,

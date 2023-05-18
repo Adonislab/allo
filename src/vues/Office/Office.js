@@ -21,7 +21,7 @@ const Office = () => {
 		navigation.navigate('Food');
 	};
 	const onPressApropos = () => {
-		navigation.navigate('AlloGroup');
+		navigation.navigate('Presentation');
 	};
 
 
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
 	},
 
 	border: {
-		backgroundColor: '#ff6d00',
-		borderRadius: 5,
+		backgroundColor: '#0a5089',
+		borderRadius: 0,
 		height: '20%',
 	},
 	margeborder: {

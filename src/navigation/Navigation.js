@@ -23,7 +23,8 @@ import Attentelivraison from '../vues/Office/Allolivreur/AttenteClient';
 import PayementLivraison  from '../vues/Office/Allolivreur/PaiementLivreur_Client';
 
 /*Importation des écrans qui naviguent dans la tabar niveau de aide */
-import AlloGroup from '../vues/AlloGroup';
+// import Presentation from '../vues/AlloGroup/AlloGroup';
+import Presentation from '../vues/AlloGroup/AlloGroup';
 import Apropos from '../vues/Aide/Apropos';
 import Autreadressedelivraison from '../vues/Aide/Autreadedressedelivraison';
 import Inscription from '../vues/Aide/Inscription';
@@ -36,12 +37,19 @@ import Reserver from '../vues/Aide/Reserver';
 import Resolutionretard from '../vues/Aide/Resolutionretard';
 import Retardconsiderable from '../vues/Aide/Retardconsiderable';
 import Receptionplatdifferent from '../vues/Aide/Receptionplatdifferent';
-
+import InscriptionLivreurNew from '../vues/Office/Allolivreur/Backlivreur/InscriptionLivreurNew';
 /*Importation des écrans qui naviguent dans la tabar niveau de food */
+import AttenteCommande from '../vues/Office/AlloFood/AttenteLivraison/AttenteCommande';
 import Food from '../vues/Office/AlloFood/Food';
-import CartScren from '../vues/Office/AlloFood/CartScreen';
 import Commande from '../vues/Office/AlloFood/Commande';
 import CartScreen from '../vues/Office/AlloFood/CartScreen';
+
+import DashboardGerant from '../vues/Office/AlloFood/Backend/DashboardGerant';
+import InscriptionGerant from '../vues/Office/AlloFood/Backend/InscriptionGerant';
+import DashboardLivreur from '../vues/Office/Allolivreur/Backlivreur/DashboardLivreur';
+import InscriptionFood from '../vues/Office/AlloFood/Backend/InscriptionFood';
+import ModifierInfos from '../vues/ProfilUtilisateur/ModifierInfos';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -73,7 +81,7 @@ function StackScreen() {
 
 			<Stack.Screen name='PayementLivraison' options={{ headerShown: false }}  component={PayementLivraison} />
 
-			<Stack.Screen name='AlloGroup' component={AlloGroup} options={{ headerShown: false}} />
+			<Stack.Screen name='Presentation' component={Presentation} options={{ headerShown: false}} />
 
 			<Stack.Screen name='Apropos' component={Apropos} options={{ headerShown: false}} />
 
@@ -104,6 +112,13 @@ function StackScreen() {
 			<Stack.Screen name='CartScreen' component={CartScreen} options={{ headerShown: false}} />
 
 			<Stack.Screen name='Commande' component={Commande} options={{ headerShown: false}} />
+			<Stack.Screen name='InscriptionLivreurNew' component={InscriptionLivreurNew} options={{ headerShown: false}} />
+			<Stack.Screen name='AttenteCommande' component={AttenteCommande} options={{ headerShown: false}} />
+			<Stack.Screen name='DashboardGerant' component={DashboardGerant} options={{ headerShown: false}} />
+			<Stack.Screen name='InscriptionGerant' component={InscriptionGerant} options={{ headerShown: false}} />
+			<Stack.Screen name='DashboardLivreur' component={DashboardLivreur} options={{ headerShown: false}} />
+			<Stack.Screen name='InscriptionFood' component={InscriptionFood} options={{ headerShown: false}} />
+			<Stack.Screen name='ModifierInfos' component={ModifierInfos} options={{ headerShown: false}} />
 
 		
 		</Stack.Navigator>
@@ -126,35 +141,36 @@ const NavigationTab = () => {
 						let iconName;
 
 						if (route.name === 'Services') {
-							iconName = focused ? 'earth-outline' : 'ion-ios-apps';
+							iconName ='earth-outline' ;
 						}
 						else if (route.name === 'Parametres') {
 							iconName = 'ios-options-outline';
 						}
 						else if (route.name === 'Activites') {
-							iconName = 'ion-ios-analytics';
+							iconName = 'analytics';
 						}
 						
 						else if (route.name === 'NotificationUtilisateur') {
-							iconName = 'ion-md-notifications';
+							iconName = 'notifications-sharp';
 						}
 
 						else if (route.name === 'ProfilUtilisateur') {
-							iconName = 'ion-md-contact';
+							iconName = 'ios-person-circle-outline';
 						}
 
 						return <Ionicons name={iconName} size={size} color={color} />;
 					},
 					tabBarActiveTintColor: '#ff6d00',
 					tabBarInactiveTintColor: '#07528a',
-					headerStyle: { backgroundColor: 'orange' },
+					headerStyle: { backgroundColor: '#0a5089' },
+					headerTintColor: 'white',
 				})}>
 
-				<Tab.Screen name='Services' component={StackScreen} />
-				<Tab.Screen name='Parametres' component={Setting} />
-				<Tab.Screen name='Activites' component={Historique} />
-				<Tab.Screen name='NotificationUtilisateur' component={NotificationUtilisateur} />
-				<Tab.Screen name='ProfilUtilisateur' component={ProfilUtilisateur} />
+				<Tab.Screen name='Services' component={StackScreen}  options={{ title: 'Home'}}/>
+				<Tab.Screen name='Parametres' component={Setting} options={{ title: 'Paramètres'}}/>
+				<Tab.Screen name='Activites' component={Historique} options={{ title: 'Activités'}}/>
+				<Tab.Screen name='NotificationUtilisateur' component={NotificationUtilisateur} options={{ title: 'Notifications'}}/>
+				<Tab.Screen name='ProfilUtilisateur' component={ProfilUtilisateur} options={{ title: 'Mon profil'}}/>
 
 
 			</Tab.Navigator>

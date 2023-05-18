@@ -6,8 +6,8 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import MapViewCustomiser from '../../../../composants/MapView';
-import CustomButton from '../../../../components/CustomButton';
-import CustomInput from '../../../../components/CustomInput';
+import CustomButton from '../../../../composants/CustomButton/CustomButton'
+import CustomInput from '../../../../composants/CustomInput/CustomInput';
 import {useForm} from 'react-hook-form';
 
 
@@ -50,7 +50,7 @@ const Details = () => {
 				    />
           </View>
 
-          <View style={{ marginTop: 50, marginBottom: 20 }}>
+          <View style={{ marginTop: 20, marginBottom: 20 }}>
               <Text style={{ color: 'orange' }}>Détails de la livraison</Text>
                 <CustomInput
 					        name='message'

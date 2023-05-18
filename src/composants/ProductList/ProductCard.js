@@ -129,12 +129,13 @@ const ProductCard = ({
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
+        backgroundColor: '#FFFFFF',
         borderRadius: 10,
         paddingVertical: 20,
         paddingHorizontal: 10,
         width: '100%',
         marginVertical: 10,  
+        borderColor:'black'
         
        },
        shadowProp: {

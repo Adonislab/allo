@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import CustomButton from '../../../composants/CustomButton';
 import CustomInput from '../../../composants/CustomInput';
 import {useForm} from 'react-hook-form';
-
+import GooglePlace from '../../../composants/GooglePlaces/GooglePlace';
 
 const Commande = () => {
 	const navigation = useNavigation();
@@ -15,7 +15,7 @@ const Commande = () => {
 
 	const onPressLieuCommande = () => {
 
-		navigation.navigate('AttenteClient');
+		navigation.navigate('AttenteCommande');
 	  };
 
 return (

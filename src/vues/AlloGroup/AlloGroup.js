@@ -116,5 +116,5 @@ const Styles = StyleSheet.create({
         paddingTop: 15,
         
     },
-})
+});
 export default Presentation;

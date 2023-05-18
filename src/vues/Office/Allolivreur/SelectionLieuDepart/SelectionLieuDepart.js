@@ -1,7 +1,9 @@
 import { View, Text , StyleSheet} from 'react-native'
 import * as React from 'react'
-import MapViewCustomiser from '../../../../composants/MapView';
-import GooglePlace  from '../../../../composants/GooglePlaces';
+// import MapViewCustomiser from '../../../../composants/MapView';
+import MapViewCustomiser from '../../../../composants/MapView/MapViewCustomiser';
+// import GooglePlace  from '../../../../composants/GooglePlaces';
+import GooglePlace  from '../../../../composants/GooglePlaces/GooglePlace';
 import CustomButton from '../../../../composants/CustomButton';
 import CustomInput from '../../../../composants/CustomInput';
 import { useNavigation } from '@react-navigation/native';
@@ -15,7 +17,7 @@ const SelectionLieuDepart = () => {
     const navigation = useNavigation();
 
     const onPressLieuDepart = () =>{
-        navigation.navigate('SelectionLieuArrivee');
+        navigation.navigate('SelectionLieuRetrait');
     }
 
   return (
@@ -26,18 +28,18 @@ const SelectionLieuDepart = () => {
 
         <View style={styles.place}>
             <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
-                Où cherchez le livrable ?
+                Où chercher le livrable ?
             </Text>
 
             <View style={styles.details}>
 
                 < GooglePlace 
-                    placeholder = {'Lieu de départ'} 
+                    placeholder = {'Entrez le lieu de départ'} 
                     namestokagedescription = {'LieudedepartLivrable'}
                     namestokagecoordonne = {'CoordonneLieuDepartLivrable'} 
                 />
                 <Text style={{ fontSize: 20, color: 'orange' }}>
-                        Personne a contacté au
+                        Personne a contacter au
                         lieu de récupération
                 </Text>
 

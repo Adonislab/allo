@@ -1,6 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import {products} from '../../screens/Office/AlloFood/Products';
+import {products} from '../../vues/Office/AlloFood/Products'
+// import products from '../../vues/Office/AlloFood/Products'
 import ProductCard from './ProductCard';
 import { useWindowDimensions } from 'react-native';
 

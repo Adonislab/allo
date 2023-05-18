@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
+// import { Ionicons } from '@expo/vector-icons';
+
 
 const CartScreen = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -32,7 +34,7 @@ const CartScreen = () => {
       });
   }, []);
 
-  const onPressPasserCommande = () => {
+  const onPressCommande = () => {
     navigation.navigate('Commande');
   };
 
@@ -54,23 +56,19 @@ const CartScreen = () => {
 
     <View style={styles.container}>
       <View style={{flexDirection:'row', alignItems:'center'}}>
-      <View style={{paddingRight:50}}> 
+      <View style={{paddingRight:30}}> 
         <TouchableOpacity onPress={onPressReprendre} >
           <Text style={{fontSize: 15}}>Reprendre mon achat</Text>
         </TouchableOpacity>
       </View> 
 
-      <View style={{paddingRight:50}}> 
-          <Text style={styles.title}>Votre Panier coûte {cartTotal} F</Text>
+      <View style={{paddingRight:30}}> 
+          <Text style={styles.title}>Total {cartTotal} F</Text>
       </View> 
 
       <View>        
-        <TouchableOpacity onPress={onPressPasserCommande} >
-          <Image 
-            style={{width:25, height:25}}
-            source={require('../../../../assets/commande.png')}
-            resizeMode='contain'
-          />
+        <TouchableOpacity onPress={onPressCommande} >
+          <Text style={styles.payer}>Payer</Text>
         </TouchableOpacity>
       </View>    
       </View>
@@ -92,7 +90,7 @@ const CartScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ccc',
+    // backgroundColor: '#ccc',
     padding: 20,
   },
   title: {
@@ -110,6 +108,14 @@ const styles = StyleSheet.create({
     width: '100%',
     marginVertical: 10,
   },
+  payer:{
+    backgroundColor: 'orange',
+    borderRadius: 10,
+    paddingRight:15,
+    paddingLeft:15,
+    color: 'white'
+    
+  }
 });
 
 export default CartScreen;

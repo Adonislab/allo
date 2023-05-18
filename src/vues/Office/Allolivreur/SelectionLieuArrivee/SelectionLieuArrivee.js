@@ -14,7 +14,7 @@ const SelectionLieuArrivee = () => {
     const navigation = useNavigation();
 
     const onPressLieuArrivee = () =>{
-        navigation.navigate('AttenteUtilisateur');
+        navigation.navigate('Details');
     }
 
   return (
@@ -28,13 +28,13 @@ const SelectionLieuArrivee = () => {
             <View style={styles.details}>
 
                 < GooglePlace 
-                    placeholder = {'Lieu de arrivee'} 
+                    placeholder = {'Entrez le lieu de livraison'} 
                     namestokagedescription = {'LieudeArriveeLivrable'}
                     namestokagecoordonne = {'CoordonneLieuArriveeLivrable'} 
                 />
                 <Text style={{ fontSize: 20, color: 'orange' }}>
-                        Personne a contacté au
-                        lieu d' arrivée
+                        Personne a contacter au
+                        lieu d'arrivée
                 </Text>
 
                 <CustomInput

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
 import Scooteur from '../../../../../assets/scooteur.gif';
@@ -6,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const AttenteClient = () => {
+const AttenteCommande = () => {
     const { height } = useWindowDimensions();
 
     const [paye, setpaye] = useState('');
@@ -82,4 +83,4 @@ const styles = StyleSheet.create({
 
 
 });
-export default AttenteClient; 
+export default AttenteCommande; 

@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import ProductsList from '../../../composants/ProductList/ProductsList';
 import { useNavigation } from '@react-navigation/native';
-
+import { Ionicons } from '@expo/vector-icons';
 
 
 const Food = () => {
@@ -26,11 +26,7 @@ const Food = () => {
                     </View>
                     <View>        
                         <TouchableOpacity onPress={onPressPanier} >
-                            <Image 
-                                style={{width:25, height:25}}
-                                source={require('../../../../assets/panier.png')}
-                                resizeMode='contain'
-                            />
+                        <Ionicons name="cart-outline" size={30} color="black" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -42,7 +38,7 @@ const Food = () => {
 const styles = StyleSheet.create({
         container: {
              flex: 1,
-             backgroundColor: '#ccc',
+            //  backgroundColor: '#FAFAFA',
              alignItems: 'center',
              justifyContent: 'center',
              maxWidth:'100%',
