@@ -25,19 +25,6 @@ export default function ModifierInfos() {
                 </View>
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Identifiant</Text>
-                </View>
-
-                <CustomInput
-                    name='identifiant'
-                    control={control}
-                    placeholder={'Votre identifiant'}
-                    rules={{
-                        required: 'Obligatoire',
-                    }}
-                />
-
-                <View style={{ backgroundColor: '#0A5089', alignItems: 'center' }}>
                     <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>NOM</Text>
                 </View>
 
@@ -82,18 +69,6 @@ export default function ModifierInfos() {
                     }}
                 />
 
-                <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Email</Text>
-                </View>
-
-                <CustomInput
-                    name='email'
-                    control={control}
-                    placeholder={'Email'}
-                    rules={{
-
-                    }}
-                />
 
                 <UploadImage />
 
