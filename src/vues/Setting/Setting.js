@@ -8,9 +8,9 @@ import { useNavigation } from '@react-navigation/native';
 const Setting = () => {
 	
 	const navigation = useNavigation();
-	const onPressFunctionRecharger = () => {
-		navigation.navigate('FedaPayCheckout')	
-		console.log('checkout portefeuille')
+	const onPressFunctionProfil = () => {
+		navigation.navigate('ProfilUtilisateur')	
+		
 	};
 
 	const [user, setUser] = React.useState(null); // état pour stocker les informations de l'utilisateur
@@ -33,8 +33,8 @@ const Setting = () => {
 	const onPressFastFood = () => {
 		navigation.navigate('InscriptionGerant');
 	};
-	const onPressFoire = () => {
-		navigation.navigate('Presentation')
+	const onPressFunctionRecharger = () => {
+		navigation.navigate('FedaCheckout')
 	};
 
 	return (
@@ -48,37 +48,34 @@ const Setting = () => {
 	</View>	
 	
 	
-	<Pressable style={{paddingBottom:20, paddingTop:20, alignItems:'center'}}
-		onPress={onPressFunctionRecharger}>
-  		<Text style={{fontWeight:'bold', color:'blue'}}>Rechargez mon portefeuille</Text>
-	</Pressable>
+	
 	
 	<View style={{alignItems:'center'}}>
-		<Text style={{fontSize:15, fontWeight:'bold', 
-		paddingBottom:20, color:'orange'}}>
-			😊 BON PLAN DJIGO 👇🏽
-		</Text>
+	<Pressable style={{ paddingTop:20, alignItems:'center'}}
+		onPress={onPressFunctionProfil}>
+  		<Text style={{ color:'orange'}}>Mon profil</Text>
+	</Pressable>
+		
+	<Pressable style={{paddingBottom:20, paddingTop:20, alignItems:'center'}}
+		onPress={onPressFunctionRecharger}>
+  		<Text style={{ color:'orange'}}>Rechargez mon portefeuille</Text>
+	</Pressable>
 
 		<TouchableOpacity onPress={onPressLivreur}>
 			<Text style={{fontSize:15, 
-			paddingBottom:20}}>
-				Quoi livrez aujourd'hui ?
+			paddingBottom:20, color:'orange'}}>
+				Statut Livreur
 			</Text>
 		</TouchableOpacity>
 
 		<TouchableOpacity onPress={onPressFastFood}>
 			<Text style={{fontSize:15, 
-			paddingBottom:20}}>
-				Postez sa bouffe 😊
+			paddingBottom:20, color:'orange'}}>
+				Statut Restaurant
 			</Text>
 		</TouchableOpacity>
 
-		<TouchableOpacity onPress={onPressFoire}>
-			<Text style={{fontSize:15, 
-			paddingBottom:20}}>
-				Foire aux questions
-			</Text>
-		</TouchableOpacity>
+		
 
 	</View>
 	</View>	

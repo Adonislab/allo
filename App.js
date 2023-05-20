@@ -3,7 +3,6 @@ import { SafeAreaView, StyleSheet} from 'react-native';
 import Navigation from './src/navigation/Principale';
 import Amplify from "@aws-amplify/core";
 import config from './src/aws-exports';
-
 Amplify.configure(config);
 
 const App = () => {

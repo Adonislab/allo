@@ -166,7 +166,7 @@ const NavigationTab = () => {
 					headerTintColor: 'white',
 				})}>
 
-				<Tab.Screen name='Services' component={StackScreen}  options={{ title: 'Home'}}/>
+				<Tab.Screen name='Services' component={StackScreen}  options={{ title: 'Accueil'}}/>
 				<Tab.Screen name='Parametres' component={Setting} options={{ title: 'Paramètres'}}/>
 				<Tab.Screen name='Activites' component={Historique} options={{ title: 'Activités'}}/>
 				<Tab.Screen name='NotificationUtilisateur' component={NotificationUtilisateur} options={{ title: 'Notifications'}}/>

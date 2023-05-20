@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, useWindowDimensions, TouchableOpacity, Alert } from 'react-native';
 import Scooteur from '../../../../../assets/scooteur.gif';
 import CustomButton from '../../../../composants/CustomButton/CustomButton'
 import { useNavigation } from '@react-navigation/native';
@@ -12,8 +12,9 @@ const AttenteClient = () => {
     const [paye, setpaye] = useState('');
 
     const navigation = useNavigation();
-    const onPressRetour = () => {
-        navigation.navigate('Services');
+    const onPressEspece = () => {
+        // navigation.navigate('Services');
+        Alert('Vous avez effectué un paiement en espèce de {}F')
     };
 
     const onPressPayement = () => {
@@ -37,16 +38,20 @@ const AttenteClient = () => {
 
 
             <CustomButton
-                text='Je paye mon service par voie électronique'
+                text='Je paye en Espèces'
+                onPress={onPressEspece}
+                bgColor='#ff6d00'
+                fgColor='white'
+            />
+
+            <CustomButton
+                text='Je procède au paiement électronique'
                 onPress={onPressPayement}
                 bgColor='#ff6d00'
                 fgColor='white'
             />
 
-            <View>
-                <Text style={styles.title2}>Le sens de l'engagement, Avec vous, chaque jour
-                </Text>
-            </View>
+            
 
 
 

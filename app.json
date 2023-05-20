@@ -12,7 +12,7 @@
       "backgroundColor": "#0a5089"
     },
     "assetBundlePatterns": [
-      "**/*"
+      "./src/aws-exports.js"
     ],
     "ios": {
       "supportsTablet": true
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/LogoHome.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.bulldo.allogroup"
     },
     "web": {
       "favicon": "./assets/LogoHome.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "42a4b92a-b7f5-4212-b209-07257324ba8b"
+      }
     }
   }
 }

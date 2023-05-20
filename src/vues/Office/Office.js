@@ -122,9 +122,10 @@ const styles = StyleSheet.create({
 	},
 
 	border: {
-		backgroundColor: '#0a5089',
-		borderRadius: 0,
+		backgroundColor: '#ccc',
+		borderRadius: 10,
 		height: '20%',
+		marginTop:10,
 	},
 	margeborder: {
 		marginRight: 30,
