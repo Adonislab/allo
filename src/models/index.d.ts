@@ -17,7 +17,7 @@ type EagerUtilisateur = {
   readonly telephone?: string | null;
   readonly photo?: string | null;
   readonly adresse?: string | null;
-  readonly Username?: string | null;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -33,7 +33,7 @@ type LazyUtilisateur = {
   readonly telephone?: string | null;
   readonly photo?: string | null;
   readonly adresse?: string | null;
-  readonly Username?: string | null;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -59,6 +59,7 @@ type EagerCommandeFoodModel = {
   readonly numeroclient?: string | null;
   readonly positionclient?: string | null;
   readonly FoodCardModels?: (FoodCardModel | null)[] | null;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -78,6 +79,7 @@ type LazyCommandeFoodModel = {
   readonly numeroclient?: string | null;
   readonly positionclient?: string | null;
   readonly FoodCardModels: AsyncCollection<FoodCardModel>;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -101,6 +103,7 @@ type EagerFoodCardModel = {
   readonly imageproduit?: string | null;
   readonly EntrepriseFood?: (FastFoodEntrepriseModel | null)[] | null;
   readonly commandefoodmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -118,6 +121,7 @@ type LazyFoodCardModel = {
   readonly imageproduit?: string | null;
   readonly EntrepriseFood: AsyncCollection<FastFoodEntrepriseModel>;
   readonly commandefoodmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -143,6 +147,7 @@ type EagerTablelivraisonModel = {
   readonly Livreur?: (LivreurModel | null)[] | null;
   readonly personnedepart?: string | null;
   readonly personnearrivee?: string | null;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -162,6 +167,7 @@ type LazyTablelivraisonModel = {
   readonly Livreur: AsyncCollection<LivreurModel>;
   readonly personnedepart?: string | null;
   readonly personnearrivee?: string | null;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -184,6 +190,7 @@ type EagerLivreurModel = {
   readonly photoprofil?: string | null;
   readonly tablelivraisonmodelID: string;
   readonly commandefoodmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -200,6 +207,7 @@ type LazyLivreurModel = {
   readonly photoprofil?: string | null;
   readonly tablelivraisonmodelID: string;
   readonly commandefoodmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -220,6 +228,7 @@ type EagerFastFoodEntrepriseModel = {
   readonly telephone?: string | null;
   readonly logo?: string | null;
   readonly foodcardmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -234,6 +243,7 @@ type LazyFastFoodEntrepriseModel = {
   readonly telephone?: string | null;
   readonly logo?: string | null;
   readonly foodcardmodelID: string;
+  readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

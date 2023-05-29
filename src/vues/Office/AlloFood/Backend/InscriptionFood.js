@@ -22,10 +22,10 @@ export default function InscriptionFood() {
                     style={{ width: '60%', height:150 }}
                 />
             </View>
-            {/* <ScrollView> */}
-                <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Titre du produit</Text>
-                </View>
+
+            <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Titre du produit</Text>
+            </View>
 
                 <CustomInput
                     name='nom'
@@ -37,7 +37,7 @@ export default function InscriptionFood() {
                 />
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Prix unitaire du produit</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Prix unitaire du produit</Text>
                 </View>
 
                 <CustomInput
@@ -51,7 +51,7 @@ export default function InscriptionFood() {
                 />
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Description du produit</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Description du produit</Text>
                 </View>
 
 
@@ -66,7 +66,7 @@ export default function InscriptionFood() {
                 />
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Categorie du produit</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Categorie du produit</Text>
                 </View>
 
 
@@ -82,11 +82,8 @@ export default function InscriptionFood() {
 
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Ajoutez une image du produit</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Ajoutez une image du produit</Text>
                 </View>
-
-
-
 
                 <UploadImage />
 
@@ -100,14 +97,10 @@ export default function InscriptionFood() {
 
                 />
 
-            {/* </ScrollView> */}
         </View>
     )
 };
 const styles = StyleSheet.create({
-    /* Other styles hidden to keep the example brief... */
-
-    
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -115,20 +108,5 @@ const styles = StyleSheet.create({
         margin: 2,
         backgroundColor: 'white'
     },
-    button: {
-        backgroundColor: 'white',
-        padding: 5,
-        marginTop: 20,
-        borderRadius: 10
-    },
-    buttonText: {
-        color: '#ff6d00',
-        textAlign: 'center',
-        fontSize: 18
-    },
-    input: {
-        backgroundColor: 'white',
-
-    }
 });
 

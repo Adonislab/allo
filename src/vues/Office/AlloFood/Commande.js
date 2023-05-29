@@ -23,7 +23,7 @@ return (
 		<MapViewCustomiser />
 
 		<View style={styles.place}>
-			<Text style={{ fontSize: 25, fontWeight: 'bold' }}>
+			<Text style={{ fontSize: 25 }}>
 				Où livrez votre commande ?
 			</Text>
 
@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
 		shadowOffset: { width: 2, height: 2 },
 		shadowOpacity: 0.5,
 		shadowRadius: 4,
-		elevation: 4,
 		padding: 8,
 		borderRadius: 8,
 		top: 50,

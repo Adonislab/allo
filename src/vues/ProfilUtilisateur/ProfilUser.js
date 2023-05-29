@@ -36,12 +36,12 @@ const ProfilUser = () => {
         
         <Text style={styles.editButtonText}><FontAwesome5 name="user-edit" size={24} color="white" /> Modifier mes informations </Text>
       </TouchableOpacity>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Identifiant : {user?.username}</Text>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Email : {user?.attributes?.email}</Text>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Nom : { }</Text>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Prénom : { }</Text>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Téléphone : { }</Text>
-      <Text style={{ fontSize: 15, paddingBottom: 20 }}> Statut : { }</Text>
+      <Text style={{ paddingBottom: 20 }}> Identifiant : {user?.username}</Text>
+      <Text style={{ paddingBottom: 20 }}> Email : {user?.attributes?.email}</Text>
+      <Text style={{ paddingBottom: 20 }}> Nom : { }</Text>
+      <Text style={{ paddingBottom: 20 }}> Prénom : { }</Text>
+      <Text style={{ paddingBottom: 20 }}> Téléphone : { }</Text>
+      <Text style={{ paddingBottom: 20 }}> Statut : { }</Text>
 
 
       <TouchableOpacity style={{ paddingBottom: 20 }} >

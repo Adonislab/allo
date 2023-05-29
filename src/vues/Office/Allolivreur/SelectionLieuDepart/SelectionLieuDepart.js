@@ -1,8 +1,6 @@
 import { View, Text , StyleSheet} from 'react-native'
 import * as React from 'react'
-// import MapViewCustomiser from '../../../../composants/MapView';
 import MapViewCustomiser from '../../../../composants/MapView/MapViewCustomiser';
-// import GooglePlace  from '../../../../composants/GooglePlaces';
 import GooglePlace  from '../../../../composants/GooglePlaces/GooglePlace';
 import CustomButton from '../../../../composants/CustomButton';
 import CustomInput from '../../../../composants/CustomInput';
@@ -87,7 +85,6 @@ const styles = StyleSheet.create({
 		shadowOffset: { width: 2, height: 2 },
 		shadowOpacity: 0.5,
 		shadowRadius: 4,
-		elevation: 4,
 		padding: 8,
 		borderRadius: 8,
 		top: 50,

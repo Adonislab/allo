@@ -14,13 +14,12 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Verification code: {####} Allo Group",
-    "emailVerificationMessage": "Bonjour champion(ne) , \n\nMerci pour votre inscription au servce de Allo Group.\nVotre code de verification est le suivant :\n\nVerification code: {####}\n\nAgreablement experience avec nos srvices,\nCoordialement Allo Group.",
+    "emailVerificationSubject": "Verification code : Allo Group {####} ",
+    "emailVerificationMessage": "Bonjour champion(ne), \n\nMerci pour votre inscription au servce de Allo Group.\nVotre code de verification est le suivant : {####}\nAgreablement experience avec nos services,\nCoordialement Allo Group.",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [
       "Requires Lowercase",
-      "Requires Numbers",
       "Requires Uppercase"
     ],
     "requiredAttributes": [

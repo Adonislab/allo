@@ -25,10 +25,6 @@ export default function UploadImage() {
 
   return (
     <View style={styles.container}>
-      {/* {selectedImage && (
-        <Image source={{ uri: selectedImage }} style={styles.image} resizeMode="cover" />
-      )} */}
-
       <TouchableOpacity onPress={pickImage} style={styles.button}>
         <Text style={styles.buttonText}>{buttonText}</Text>
       </TouchableOpacity>

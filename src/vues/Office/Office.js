@@ -39,13 +39,10 @@ const Office = () => {
 		<SafeAreaView style={styles.root}>
 			<ScrollView showsVerticalScrollIndicator={true} >
 				<View style={styles.border}>
-					<ScrollView horizontal={true}>
-						<View style={{ flex: 0.5, paddingLeft: 10 }}>
-							<Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>PorteFeuille</Text>
-							<Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>0 F </Text>
-						</View>
-					</ScrollView>
-
+					<View style={{ flex: 0.5, paddingLeft: 10 }}>
+						<Text style={{ fontSize: 15, color: 'white' }}>PorteFeuille</Text>
+						<Text style={{ fontSize: 15, color: 'white' }}>0 F </Text>
+					</View>
 				</View>
 
 				<View style={styles.services}>
@@ -62,6 +59,7 @@ const Office = () => {
 								<Text style={{ fontSize: 12 }}>Livreur</Text>
 							</View>
 						</TouchableOpacity>
+
 						<TouchableOpacity
 							onPress={onPressFood}>
 							<View style={styles.borderservice}>
@@ -75,6 +73,7 @@ const Office = () => {
 								<Text style={{ fontSize: 12 }}>Food</Text>
 							</View>
 						</TouchableOpacity>
+
 						<TouchableOpacity
 							onPress={onPressApropos}>
 							<View style={styles.borderservice}>
@@ -143,13 +142,11 @@ const styles = StyleSheet.create({
 	promotion: {
 		alignItems: 'center',
 		justifyContent: 'center',
-		fontWeight: 'bold',
 		fontSize: 20,
 		color: '#ff6d00',
 	},
 	services: {
 		paddingTop: 30,
-		paddingBottom: 20,
 	},
 
 

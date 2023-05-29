@@ -11,21 +11,15 @@
       "resizeMode": "contain",
       "backgroundColor": "#0a5089"
     },
-    "assetBundlePatterns": [
-      "./src/aws-exports.js"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/LogoHome.png",
+        "foregroundImage": "./assets/Icone.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.bulldo.allogroup"
     },
     "web": {
-      "favicon": "./assets/LogoHome.png"
+      "favicon": "./assets/Icone.png"
     },
     "extra": {
       "eas": {

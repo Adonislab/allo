@@ -21,7 +21,7 @@ const SelectionLieuArrivee = () => {
     <View>        
         < MapView />
         <View style={styles.place}>
-            <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
+            <Text style={{ fontSize: 25 }}>
                 Où livrez-vous ?
             </Text>
 
@@ -32,7 +32,7 @@ const SelectionLieuArrivee = () => {
                     namestokagedescription = {'LieudeArriveeLivrable'}
                     namestokagecoordonne = {'CoordonneLieuArriveeLivrable'} 
                 />
-                <Text style={{ fontSize: 20, color: 'orange' }}>
+                <Text style={{ color: 'orange' }}>
                         Personne a contacter au
                         lieu d'arrivée
                 </Text>
@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
 		shadowOffset: { width: 2, height: 2 },
 		shadowOpacity: 0.5,
 		shadowRadius: 4,
-		elevation: 4,
 		padding: 8,
 		borderRadius: 8,
 		top: 50,

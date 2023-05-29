@@ -11,15 +11,6 @@ const GooglePlace = ({ placeholder, namestokagedescription, namestokagecoordonne
       placeholder={placeholder}
       onPress={async (details = null) => {
         console.log(details.description);
-        try {
-          await AsyncStorage.multiSet([
-            [namestokagedescription, details.description],
-            [namestokagecoordonne, details.NumeroArrivee]
-          ]);
-          console.log('done');
-        } catch (error) {
-          console.error("Erreur lors de la sauvegarde des données :", error);
-        }
       }}
       query={{
         key: GOOGLE_API_KEY,

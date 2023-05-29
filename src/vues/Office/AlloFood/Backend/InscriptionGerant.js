@@ -1,6 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
-
+import { Image, StyleSheet, Text, View } from 'react-native';
 import UploadImage from '../../../../composants/UploadImage/UploadImage';
 import { useNavigation } from '@react-navigation/native';
 import CustomInput from '../../../../composants/CustomInput/CustomInput';
@@ -29,7 +28,7 @@ export default function InscriptionGerant() {
                     />
                 </View>
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>ENTREPRISE</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Entreprise</Text>
                 </View>
 
                 <CustomInput
@@ -42,22 +41,8 @@ export default function InscriptionGerant() {
                 />
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>NUMERO DE TELEPHONE</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Contact</Text>
                 </View>
-
-                {/* <CustomInput
-                    name='Numéro de téléphone'
-                    control={control}
-                    placeholder={'Votre numero'}
-                    rules={{
-                        required: 'Obligatoire',
-                    }}
-                /> */}
-
-                {/* <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>NUMERO DE TELEPHONE</Text>
-                </View> */}
-
 
                 <CustomInput
                     name='numero'
@@ -74,7 +59,7 @@ export default function InscriptionGerant() {
                 />
 
                 <View style={{ backgroundColor: '#0A5089', alignItems: 'center', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>Ajoutez un logo</Text>
+                    <Text style={{ fontSize: 18, color: 'white' }}>Ajoutez un logo</Text>
                 </View>
                 <UploadImage />
 
@@ -95,12 +80,6 @@ export default function InscriptionGerant() {
 
 const styles = StyleSheet.create({
     /* Other styles hidden to keep the example brief... */
-
-    thumbnail: {
-        width: 300,
-        height: 300,
-        resizeMode: "contain"
-    },
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -108,20 +87,5 @@ const styles = StyleSheet.create({
         margin: 5,
         backgroundColor: 'white'
     },
-    button: {
-        backgroundColor: 'white',
-        padding: 5,
-        marginTop: 10,
-        borderRadius: 10
-    },
-    buttonText: {
-        color: '#ff6d00',
-        textAlign: 'center',
-        fontSize: 18
-    },
-    input: {
-        backgroundColor: 'white',
-        borderRadius: 28,
-    }
 });
 

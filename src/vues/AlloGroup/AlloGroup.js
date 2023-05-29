@@ -48,41 +48,41 @@ const Presentation = () => {
                     </Text>
 
                     <TouchableOpacity style={Styles.title} onPress={onPressApropos}>
-                        <Text style={{fontWeight:'bold'}}>C’est quoi Allô Group ? </Text>
+                        <Text>C’est quoi Allô Group ? </Text>
                     </TouchableOpacity>
 
 
                     <TouchableOpacity style={Styles.title} onPress={onPressPourquoi}>
-                        <Text style={{fontWeight:'bold'}}>Pourquoi choisir Allô Group ? </Text>
+                        <Text>Pourquoi choisir Allô Group ? </Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={onPressParrain} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>Parrainer un nouvel utilisateur</Text>
+                        <Text>Parrainer un nouvel utilisateur</Text>
                     </TouchableOpacity>
         
                     <TouchableOpacity onPress={onPressReserver} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>Réserver la course Allô Group</Text>
+                        <Text >Réserver la course Allô Group</Text>
                     </TouchableOpacity>
 
                     {/* not working */}
                     <TouchableOpacity onPress={onPressInscriptionFAQ} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>Comment télécharger l’application Allogroup ?</Text>
+                        <Text>Comment télécharger l’application Allogroup ?</Text>
                     </TouchableOpacity>
 
 
                     <TouchableOpacity onPress={onPressTypedepaiement} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>Quels types de paiements acceptez-vous ?</Text>
+                        <Text>Quels types de paiements acceptez-vous ?</Text>
                     </TouchableOpacity>
 
 
 
                     <TouchableOpacity onPress={onPressRetardconsiderable} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>Ma commande a été livré avec un retard considérable, que faire ?</Text>
+                        <Text>Ma commande a été livré avec un retard considérable, que faire ?</Text>
                     </TouchableOpacity>
 
 
                     <TouchableOpacity onPress={onPressReceptiondecolis} style={Styles.title}>
-                        <Text style={{fontWeight:'bold'}}>J’ai reçu une commande de colis différente de celle que j’ai commandée, que dois-je faire ?</Text>
+                        <Text>J’ai reçu une commande de colis différente de celle que j’ai commandée, que dois-je faire ?</Text>
                     </TouchableOpacity>
 
 

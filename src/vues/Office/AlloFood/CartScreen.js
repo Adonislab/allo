@@ -90,12 +90,10 @@ const CartScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#ccc',
     padding: 20,
   },
   title: {
     fontSize: 10,
-    fontWeight: 'bold',
     textAlign :'center',
     color : 'orange',
     

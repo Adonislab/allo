@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         borderColor:'black'
         
        },
-       shadowProp: {
+        shadowProp: {
         shadowColor: '#171717',
         shadowOffset: {width: -2, height: 4},
         shadowOpacity: 0.2,

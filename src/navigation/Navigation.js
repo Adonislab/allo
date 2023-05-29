@@ -23,7 +23,6 @@ import Attentelivraison from '../vues/Office/Allolivreur/AttenteClient';
 import PayementLivraison  from '../vues/Office/Allolivreur/PaiementLivreur_Client';
 
 /*Importation des écrans qui naviguent dans la tabar niveau de aide */
-// import Presentation from '../vues/AlloGroup/AlloGroup';
 import Presentation from '../vues/AlloGroup/AlloGroup';
 import Apropos from '../vues/Aide/Apropos';
 import Autreadressedelivraison from '../vues/Aide/Autreadedressedelivraison';
@@ -112,12 +111,19 @@ function StackScreen() {
 			<Stack.Screen name='CartScreen' component={CartScreen} options={{ headerShown: false}} />
 
 			<Stack.Screen name='Commande' component={Commande} options={{ headerShown: false}} />
+
 			<Stack.Screen name='InscriptionLivreurNew' component={InscriptionLivreurNew} options={{ headerShown: false}} />
+
 			<Stack.Screen name='AttenteCommande' component={AttenteCommande} options={{ headerShown: false}} />
+
 			<Stack.Screen name='DashboardGerant' component={DashboardGerant} options={{ headerShown: false}} />
+
 			<Stack.Screen name='InscriptionGerant' component={InscriptionGerant} options={{ headerShown: false}} />
+
 			<Stack.Screen name='DashboardLivreur' component={DashboardLivreur} options={{ headerShown: false}} />
+
 			<Stack.Screen name='InscriptionFood' component={InscriptionFood} options={{ headerShown: false}} />
+
 			<Stack.Screen name='ModifierInfos' component={ModifierInfos} options={{ headerShown: false}} />
 
 		
@@ -167,9 +173,13 @@ const NavigationTab = () => {
 				})}>
 
 				<Tab.Screen name='Services' component={StackScreen}  options={{ title: 'Accueil'}}/>
+
 				<Tab.Screen name='Parametres' component={Setting} options={{ title: 'Paramètres'}}/>
+
 				<Tab.Screen name='Activites' component={Historique} options={{ title: 'Activités'}}/>
+
 				<Tab.Screen name='NotificationUtilisateur' component={NotificationUtilisateur} options={{ title: 'Notifications'}}/>
+				
 				<Tab.Screen name='ProfilUtilisateur' component={ProfilUtilisateur} options={{ title: 'Mon profil'}}/>
 
 

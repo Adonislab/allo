@@ -9,7 +9,7 @@ const Home = () => {
 
 	setTimeout(() => {
 		navigation.navigate('Connexion'); 
-	}, 5000)
+	}, 2000)
 
 	return (
 		<View style={styles.root}>
@@ -35,7 +35,6 @@ const styles= StyleSheet.create({
 	text :{
 		fontSize:25,
 		color:'white',
-		fontWeight:'bold',
 		textAlign:'justify',
 	},
 });
