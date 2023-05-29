@@ -1,5 +1,6 @@
 import { View, Text , StyleSheet} from 'react-native'
 import * as React from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import MapViewCustomiser from '../../../../composants/MapView/MapViewCustomiser';
 import GooglePlace  from '../../../../composants/GooglePlaces/GooglePlace';
 import CustomButton from '../../../../composants/CustomButton';
@@ -14,9 +15,28 @@ const SelectionLieuDepart = () => {
 
     const navigation = useNavigation();
 
-    const onPressLieuDepart = () =>{
-        navigation.navigate('SelectionLieuRetrait');
-    }
+    const onPressLieuDepart = async (data) => {
+        try {
+          // Enregistrement des informations dans AsyncStorage
+          await AsyncStorage.setItem('lieuDepart', JSON.stringify(data));
+          console.log(lieuDepart);
+          // Naviguer vers la prochaine étape
+          navigation.navigate('SelectionLieuRetrait');
+        } catch (error) {
+          console.log('Erreur lors de l\'enregistrement des données :', error);
+        }
+      };
+      
+
+    const handleLocationSelect = async (locationData) => {
+        try {
+            // Enregistrement des informations dans AsyncStorage
+            await AsyncStorage.setItem('locationData', JSON.stringify(locationData));
+            console.log(locationData);
+          } catch (error) {
+            console.log('Erreur lors de l\'enregistrement des données géo :', error);
+          }
+    };
 
   return (
     <View>
@@ -33,8 +53,7 @@ const SelectionLieuDepart = () => {
 
                 < GooglePlace 
                     placeholder = {'Entrez le lieu de départ'} 
-                    namestokagedescription = {'LieudedepartLivrable'}
-                    namestokagecoordonne = {'CoordonneLieuDepartLivrable'} 
+                    onLocationSelect={handleLocationSelect}
                 />
                 <Text style={{ fontSize: 20, color: 'orange' }}>
                         Personne a contacter au

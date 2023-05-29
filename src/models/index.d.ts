@@ -1,6 +1,6 @@
 import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-amplify/datastore";
 // @ts-ignore
-import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/datastore";
+import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
 
 
 
@@ -50,16 +50,11 @@ type EagerCommandeFoodModel = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly Livreur?: (LivreurModel | null)[] | null;
-  readonly title?: string | null;
-  readonly price?: string | null;
-  readonly description?: string | null;
-  readonly category?: string | null;
-  readonly image?: string | null;
   readonly numeroclient?: string | null;
   readonly positionclient?: string | null;
-  readonly FoodCardModels?: (FoodCardModel | null)[] | null;
   readonly username?: string | null;
+  readonly id_livreur?: string | null;
+  readonly id_repas?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -70,16 +65,11 @@ type LazyCommandeFoodModel = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly Livreur: AsyncCollection<LivreurModel>;
-  readonly title?: string | null;
-  readonly price?: string | null;
-  readonly description?: string | null;
-  readonly category?: string | null;
-  readonly image?: string | null;
   readonly numeroclient?: string | null;
   readonly positionclient?: string | null;
-  readonly FoodCardModels: AsyncCollection<FoodCardModel>;
   readonly username?: string | null;
+  readonly id_livreur?: string | null;
+  readonly id_repas?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -101,9 +91,8 @@ type EagerFoodCardModel = {
   readonly description?: string | null;
   readonly categorie?: string | null;
   readonly imageproduit?: string | null;
-  readonly EntrepriseFood?: (FastFoodEntrepriseModel | null)[] | null;
-  readonly commandefoodmodelID: string;
   readonly username?: string | null;
+  readonly id_agence?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -119,9 +108,8 @@ type LazyFoodCardModel = {
   readonly description?: string | null;
   readonly categorie?: string | null;
   readonly imageproduit?: string | null;
-  readonly EntrepriseFood: AsyncCollection<FastFoodEntrepriseModel>;
-  readonly commandefoodmodelID: string;
   readonly username?: string | null;
+  readonly id_agence?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -144,10 +132,10 @@ type EagerTablelivraisonModel = {
   readonly lieuarrivee?: string | null;
   readonly numerodepart?: string | null;
   readonly numeroarrivee?: string | null;
-  readonly Livreur?: (LivreurModel | null)[] | null;
   readonly personnedepart?: string | null;
   readonly personnearrivee?: string | null;
   readonly username?: string | null;
+  readonly id_livreur?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -164,10 +152,10 @@ type LazyTablelivraisonModel = {
   readonly lieuarrivee?: string | null;
   readonly numerodepart?: string | null;
   readonly numeroarrivee?: string | null;
-  readonly Livreur: AsyncCollection<LivreurModel>;
   readonly personnedepart?: string | null;
   readonly personnearrivee?: string | null;
   readonly username?: string | null;
+  readonly id_livreur?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -188,8 +176,6 @@ type EagerLivreurModel = {
   readonly prenom?: string | null;
   readonly numero?: string | null;
   readonly photoprofil?: string | null;
-  readonly tablelivraisonmodelID: string;
-  readonly commandefoodmodelID: string;
   readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -205,8 +191,6 @@ type LazyLivreurModel = {
   readonly prenom?: string | null;
   readonly numero?: string | null;
   readonly photoprofil?: string | null;
-  readonly tablelivraisonmodelID: string;
-  readonly commandefoodmodelID: string;
   readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -227,7 +211,6 @@ type EagerFastFoodEntrepriseModel = {
   readonly nom_entreprise?: string | null;
   readonly telephone?: string | null;
   readonly logo?: string | null;
-  readonly foodcardmodelID: string;
   readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -242,7 +225,6 @@ type LazyFastFoodEntrepriseModel = {
   readonly nom_entreprise?: string | null;
   readonly telephone?: string | null;
   readonly logo?: string | null;
-  readonly foodcardmodelID: string;
   readonly username?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;

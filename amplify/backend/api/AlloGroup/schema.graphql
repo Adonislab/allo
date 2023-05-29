@@ -10,16 +10,11 @@ type Utilisateur @model @auth(rules: [{allow: public}]) {
 
 type CommandeFoodModel @model @auth(rules: [{allow: public}]) {
   id: ID!
-  Livreur: [LivreurModel] @hasMany(indexName: "byCommandeFoodModel", fields: ["id"])
-  title: String
-  price: String
-  description: String
-  category: String
-  image: String
   numeroclient: String
   positionclient: String
-  FoodCardModels: [FoodCardModel] @hasMany(indexName: "byCommandeFoodModel", fields: ["id"])
   username: String
+  id_livreur: String
+  id_repas: String
 }
 
 type FoodCardModel @model @auth(rules: [{allow: public}]) {
@@ -29,9 +24,8 @@ type FoodCardModel @model @auth(rules: [{allow: public}]) {
   description: String
   categorie: String
   imageproduit: String
-  EntrepriseFood: [FastFoodEntrepriseModel] @hasMany(indexName: "byFoodCardModel", fields: ["id"])
-  commandefoodmodelID: ID! @index(name: "byCommandeFoodModel")
   username: String
+  id_agence: String
 }
 
 type TablelivraisonModel @model @auth(rules: [{allow: public}]) {
@@ -42,10 +36,10 @@ type TablelivraisonModel @model @auth(rules: [{allow: public}]) {
   lieuarrivee: String
   numerodepart: String
   numeroarrivee: String
-  Livreur: [LivreurModel] @hasMany(indexName: "byTablelivraisonModel", fields: ["id"])
   personnedepart: String
   personnearrivee: String
   username: String
+  id_livreur: String
 }
 
 type LivreurModel @model @auth(rules: [{allow: public}]) {
@@ -54,8 +48,6 @@ type LivreurModel @model @auth(rules: [{allow: public}]) {
   prenom: String
   numero: String
   photoprofil: String
-  tablelivraisonmodelID: ID! @index(name: "byTablelivraisonModel")
-  commandefoodmodelID: ID! @index(name: "byCommandeFoodModel")
   username: String
 }
 
@@ -64,7 +56,5 @@ type FastFoodEntrepriseModel @model @auth(rules: [{allow: public}]) {
   nom_entreprise: String
   telephone: String
   logo: String
-  foodcardmodelID: ID! @index(name: "byFoodCardModel")
   username: String
-}
- 
+} 

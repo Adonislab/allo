@@ -104,57 +104,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "Livreur": {
-                    "name": "Livreur",
-                    "isArray": true,
-                    "type": {
-                        "model": "LivreurModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": [
-                            "commandefoodmodelID"
-                        ]
-                    }
-                },
-                "title": {
-                    "name": "title",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "price": {
-                    "name": "price",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "description": {
-                    "name": "description",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "category": {
-                    "name": "category",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "image": {
-                    "name": "image",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "numeroclient": {
                     "name": "numeroclient",
                     "isArray": false,
@@ -169,24 +118,22 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "FoodCardModels": {
-                    "name": "FoodCardModels",
-                    "isArray": true,
-                    "type": {
-                        "model": "FoodCardModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": [
-                            "commandefoodmodelID"
-                        ]
-                    }
-                },
                 "username": {
                     "name": "username",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "id_livreur": {
+                    "name": "id_livreur",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "id_repas": {
+                    "name": "id_repas",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -279,31 +226,15 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "EntrepriseFood": {
-                    "name": "EntrepriseFood",
-                    "isArray": true,
-                    "type": {
-                        "model": "FastFoodEntrepriseModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": [
-                            "foodcardmodelID"
-                        ]
-                    }
-                },
-                "commandefoodmodelID": {
-                    "name": "commandefoodmodelID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
                 "username": {
                     "name": "username",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "id_agence": {
+                    "name": "id_agence",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -332,15 +263,6 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byCommandeFoodModel",
-                        "fields": [
-                            "commandefoodmodelID"
-                        ]
-                    }
                 },
                 {
                     "type": "auth",
@@ -412,22 +334,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "Livreur": {
-                    "name": "Livreur",
-                    "isArray": true,
-                    "type": {
-                        "model": "LivreurModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": [
-                            "tablelivraisonmodelID"
-                        ]
-                    }
-                },
                 "personnedepart": {
                     "name": "personnedepart",
                     "isArray": false,
@@ -444,6 +350,13 @@ export const schema = {
                 },
                 "username": {
                     "name": "username",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "id_livreur": {
+                    "name": "id_livreur",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -529,20 +442,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "tablelivraisonmodelID": {
-                    "name": "tablelivraisonmodelID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "commandefoodmodelID": {
-                    "name": "commandefoodmodelID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
                 "username": {
                     "name": "username",
                     "isArray": false,
@@ -573,24 +472,6 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byTablelivraisonModel",
-                        "fields": [
-                            "tablelivraisonmodelID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byCommandeFoodModel",
-                        "fields": [
-                            "commandefoodmodelID"
-                        ]
-                    }
                 },
                 {
                     "type": "auth",
@@ -641,13 +522,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "foodcardmodelID": {
-                    "name": "foodcardmodelID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
                 "username": {
                     "name": "username",
                     "isArray": false,
@@ -680,15 +554,6 @@ export const schema = {
                     "properties": {}
                 },
                 {
-                    "type": "key",
-                    "properties": {
-                        "name": "byFoodCardModel",
-                        "fields": [
-                            "foodcardmodelID"
-                        ]
-                    }
-                },
-                {
                     "type": "auth",
                     "properties": {
                         "rules": [
@@ -710,5 +575,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.3",
-    "version": "02b92eaa69451996a7632d1733822174"
+    "version": "52436db048fc237f5ea8437125a04713"
 };
